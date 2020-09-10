@@ -83,7 +83,6 @@ input {
   .recipe{
     display: flex;
     margin-top: 20px;
-    
     justify-content: space-evenly;
     flex-wrap: wrap;
   }

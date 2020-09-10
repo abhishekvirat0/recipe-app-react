@@ -67,7 +67,7 @@ const Card = ({title,calories,image, ingredients}) => {
                         <h4><b>{title}</b></h4> 
                         <p>calories:  {(Math.round(calories * 100) / 100).toFixed(2) }</p> 
                     </div>
-                    <div>
+                    <div className="expandButton" style={{float: "right"}}>
                         <IconButton
                                     className={clsx(classes.expand, {
                                         [classes.expandOpen]: expanded,

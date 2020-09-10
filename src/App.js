@@ -13,17 +13,18 @@ const App = () => {
   const [query, setquery] = useState('chicken');
 
   useEffect(() => {
+    const getReceipes = async() => {
+      const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`)
+      const data = await response.json();
+      // console.log(data)
+      setReceipes(data.hits)
+    }
     getReceipes();
     // console.log('Effect has been run');
   }, [query]); // runs only once at the starting, if no data is passed.
 
 
-  const getReceipes = async() => {
-    const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`)
-    const data = await response.json();
-    // console.log(data)
-    setReceipes(data.hits)
-  }
+
 
   const updateSearch = e => {
     setSearch(e.target.value)
@@ -37,11 +38,7 @@ const App = () => {
   }
 
   return (
-    <div
-     className="App">
-
-      
-
+    <div className="App">
 
       <form onSubmit={getSearch} className="search__form">
                                         {/* onchange means every time input changes */}
@@ -59,15 +56,15 @@ const App = () => {
 
       <div className="recipe">
       
-      {recipes.map((recipe) => (
-        <Card
-                  key={recipe.recipe.label}
-                  title={recipe.recipe.label}
-                  calories={recipe.recipe.calories} 
-                  image={recipe.recipe.image}
-                  ingredients = {recipe.recipe.ingredients}
-        />
-      ))}
+        {recipes.map((recipe) => (
+          <Card
+                    key={recipe.recipe.label}
+                    title={recipe.recipe.label}
+                    calories={recipe.recipe.calories} 
+                    image={recipe.recipe.image}
+                    ingredients = {recipe.recipe.ingredients}
+          />
+        ))}
 
       </div>
 
