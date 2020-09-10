@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+.App {
+  min-height: 100vh;
+  font-family: 'Fredoka One', cursive;
+  /* background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); */
+}
+
+.search__form{
+  background-color: #06F491;
+  min-height: 10vh;
+  /* display: flex; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  -moz-box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  -webkit-appearance: none !important;
+  -webkit-box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    height: 4rem;
+    /* font-size: 1rem; */
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin: 40px ;   
+    display: block;
+    border:transparent;
+    padding: 20px;
+    margin-bottom:50px;
+    text-align: left;
+    /* color: #000000; */
+
+
+      background-color: #06F491;
+      color: rgba(0, 0, 0, 1.0);
+      font-size: 30px;
+      font-family: 'Montserrat';
+      font-weight: 700;
+      border-style: none;
+      /* margin-left: -15px; */
+  }
+  
+  @media screen and (max-width: 480px) {
+    input{
+        width:300px  ;
+    }
+}
+
+
+
+
+  input:focus{
+      outline: 0 none;
+  }
+  
+  .fadeInUp {
+    animation-duration: 0.75s;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
+  }
+  
+  @keyframes fadeInUp {
+    0% { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .search__button {
+    background: lightcoral;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+  }
+
+  .recipe{
+    display: flex;
+    margin-top: -30px;
+    
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .mainCard{
+    width: 25%;
+  }
+
+  @media screen and (max-width: 650px) {
+    .recipe{
+      display: grid;
+      
+      margin-top: -30px;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+}
+
+
+  .wrap__input{
+    display: flex;
+    justify-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+
