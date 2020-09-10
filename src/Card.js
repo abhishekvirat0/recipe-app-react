@@ -84,10 +84,9 @@ const Card = ({title,calories,image, ingredients}) => {
                 <div className="expand">
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>
-                {ingredients.map((ingredient)=>(
-                    <li>{ingredient.text}</li>
-                ))}
-                
+                  {ingredients.map((ingredient)=>(
+                      <li>{ingredient.text}</li>
+                  ))}
                 </CardContent>
                 </Collapse>
                 </div>
