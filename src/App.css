@@ -44,7 +44,7 @@ input {
   
   @media screen and (max-width: 480px) {
     input{
-        width:300px  ;
+        width:250px;
     }
 }
 
@@ -94,7 +94,6 @@ input {
   @media screen and (max-width: 650px) {
     .recipe{
       display: grid;
-      
       margin-top: 20px;
       justify-content: space-evenly;
       flex-wrap: wrap;

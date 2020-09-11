@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Card from './Card'
+import { config } from './config.js';
 
 const App = () => {
-  const APP_ID = '721fce3a';
-  const APP_KEY = 'ff277ef9f2d100b2622fd9a108495b2c';
+  const APP_ID = config.APP_ID;
+  const APP_KEY = config.APP_KEY;
 
   const [recipes, setReceipes] = useState([]);
 
@@ -47,7 +48,7 @@ const App = () => {
                     type="text"
                     value={search}
                     onChange={updateSearch}
-                    placeholder="Type and hit enter..."
+                    placeholder="Search Food..."
                     autoFocus
                 />
 
